@@ -11,10 +11,14 @@ class LoginPage(BaseSetup):
         super(LoginPage,self).__init__(phoneName)
 
     def setUserName(self,username):
-        self.driver.implicitly_wait(15)
-        name = self.driver.find_element_by_id(self.userNameTextField)
-        name.clear()
-        name.send_keys(username)
+        userNameElement = self.driver.find_element_by_id(self.userNameTextField)
+        userNameElement.clear()
+        userNameElement.send_keys(username)
+
+    def setPassword(self,password):
+        passWordElement = self.driver.find_element_by_id(self.passWordTextField)
+        passWordElement.clear()
+        passWordElement.send_keys(password)
 
 login_page = LoginPage("MX6")
 login_page.setUserName("just for test")
