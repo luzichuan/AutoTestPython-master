@@ -12,7 +12,6 @@ class LoginPage(BaseSetup,Driver):
         self.setDriver(self.driver)
 
     def setUserName(self,username):
-        self.driver.implicitly_wait(15)
         userNameElement = self.id(self.userNameTextField)
         userNameElement.clear()
         userNameElement.send_keys(username)
