@@ -1,4 +1,3 @@
-from selenium.webdriver.common.by import By
 from Base.BaseSetup import BaseSetup
 
 class LoginPage(BaseSetup):
